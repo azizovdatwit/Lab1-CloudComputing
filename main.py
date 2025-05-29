@@ -52,16 +52,16 @@ async def houseHead(name: str):
     return {"house": name, "head": selectedHouse.get("head")}
 
 @app.get("/spells")
-async def sortingHat(spell: str):
+async def spell(spell: str):
     return {"message": f"we need to learn how to do {spell} "}
 
 @app.get("/house/{name}/mascot")
-async def houseHead(name: str):
+async def mascot(name: str):
     selectedHouse = houses.get(name)
     return {"house": name, "mascot": selectedHouse.get("mascot")}
 
 @app.get("/house/{name}/founder")
-async def houseHead(name: str):
+async def founder(name: str):
     selectedHouse = houses.get(name)
     return {"house": name, "mascot": selectedHouse.get("founder")}
 
@@ -70,7 +70,7 @@ async def bestCharacter(person: str):
     return {"message": f"{person} is indeed a great character"}
 
 @app.get("/house/{name}/colors")
-async def houseHead(name: str):
+async def colors(name: str):
     selectedHouse = houses.get(name)
     return {"house": name, "mascot": selectedHouse.get("colors")}
 
