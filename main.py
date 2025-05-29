@@ -63,7 +63,7 @@ async def mascot(name: str):
 @app.get("/house/{name}/founder")
 async def founder(name: str):
     selectedHouse = houses.get(name)
-    return {"house": name, "mascot": selectedHouse.get("founder")}
+    return {"house": name, "founder": selectedHouse.get("founder")}
 
 @app.get("/bestCharacter")
 async def bestCharacter(person: str):
@@ -72,7 +72,7 @@ async def bestCharacter(person: str):
 @app.get("/house/{name}/colors")
 async def colors(name: str):
     selectedHouse = houses.get(name)
-    return {"house": name, "mascot": selectedHouse.get("colors")}
+    return {"house": name, "colors": selectedHouse.get("colors")}
 
 class PersonInput(BaseModel):
     name: str
