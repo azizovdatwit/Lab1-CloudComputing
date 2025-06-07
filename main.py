@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi import Cookie
 
 app = FastAPI()
 
@@ -73,6 +74,10 @@ async def bestCharacter(person: str):
 async def colors(name: str):
     selectedHouse = houses.get(name)
     return {"house": name, "colors": selectedHouse.get("colors")}
+
+@app.get("/readcookie")
+async def readCookie(username: str=Cookie(None)):
+    return {"username": username}
 
 class PersonInput(BaseModel):
     name: str
