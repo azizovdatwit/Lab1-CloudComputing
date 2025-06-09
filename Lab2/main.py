@@ -15,9 +15,11 @@ def maindriver():
         print("8. Sorting Hat (/sortingHat?student=...)")
         print("9. Spells (/spells?spell=...)")
         print("10. Best Character (/bestCharacter?person=...)")
+        print("11. Cookie")
+        print("12. Header")
         print("0. Exit")
 
-        choice = input("Enter your choice (0-10): ")
+        choice = input("Enter your choice (0-12): ")
 
         if choice == '1':
             url = "http://localhost:8080/"
@@ -42,7 +44,7 @@ def maindriver():
             print("Response Body:", response.json())
 
         elif choice == '5':
-            name = input("Enter house name: ")
+            name = input("Enter house name: ").lower()
             url = f"http://localhost:8080/house/{name}/mascot"
             response = requests.get(url)
             print("Response Body:", response.json())
@@ -77,9 +79,22 @@ def maindriver():
             response = requests.get(url)
             print("Response Body:", response.json())
 
+        elif choice == '11':
+            cookie = input("Enter cookie value for 'username': ")
+            url = "http://localhost:8080/welcome"
+            response = requests.get(url, cookies={"username": cookie})
+            print("Response Body:", response.json())
+
+        elif choice == '12':
+            header = input("Enter header value for 'house': ")
+            url = "http://localhost:8080/verify-house"
+            response = requests.get(url, headers={"house": header})
+            print("Response Body:", response.text)
+
         elif choice == '0':
             print("Exiting the program.")
             continueLoop = False
+
 
         else:
             print("Invalid choice. Please try again.")

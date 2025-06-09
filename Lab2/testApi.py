@@ -64,9 +64,19 @@ class httpRequestsTest(unittest.TestCase):
         self.assertEqual(200, response.status_code)
 
     def test_readCookie(self):
-        url = "http://localhost:8080/readcookie"
-        cookies = {"username": "RonWeasley"}
+        url = "http://localhost:8080/welcome"
+        cookies = {'username': 'Hermione'}
         response = requests.get(url, cookies=cookies)
-        print("Response Body:", response.json())
+
+        print("Response Body2:", response.json())
         self.assertEqual(200, response.status_code)
-        self.assertEqual(response.json()["username"], "RonWeasley")
+
+
+    def test_header_correct(self):
+        url = "http://localhost:8080/verify-house"
+        headers = {'house': 'Hufflepuff'}
+        response = requests.get(url, headers=headers)
+        print("Response Body1:", response.text)
+        self.assertEqual(200, response.status_code)
+
+

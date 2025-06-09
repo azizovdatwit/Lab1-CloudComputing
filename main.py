@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from fastapi import Cookie
+from fastapi import Cookie, Header
 
 app = FastAPI()
 
@@ -75,13 +75,20 @@ async def colors(name: str):
     selectedHouse = houses.get(name)
     return {"house": name, "colors": selectedHouse.get("colors")}
 
-@app.get("/readcookie")
+@app.get("/welcome")
 async def readCookie(username: str=Cookie(None)):
     return {"username": username}
+
+@app.get("/verify-house")
+async def verify_house(house: str = Header(None)):
+    if house == "Hufflepuff":
+        return "Hufflepuff"
+    return "Not HufflePuff"
 
 class PersonInput(BaseModel):
     name: str
     house: str
+
 @app.post("/hello_personclass")
 async def hello_personclass(input: PersonInput):
     return f" {input.name}, welcome to {input.house} "
