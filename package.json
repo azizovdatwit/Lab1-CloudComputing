@@ -1,5 +1,27 @@
 {
   "dependencies": {
     "express": "^5.1.0"
-  }
+  },
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "Welcome to the Harry Potter World! In this project, you can get information about HP houses. You can learn about their head teachers, founders, mascots and the colors. I have 11 routes, including simple, path, query and post. Since this project uses fastAPI & uvicorn as app server, this will be running on localhost port 8080. To run this, clone the whole repo - \"git clone url\". It is expected that you clone the repo using pycharm terminal. If using another IDE, things may be different. Then make sure you have fastAPI installed, if not do \"pip install fastapi\". Same thing with uvicorn - \"pip install uvicorn\".  After all,  run this command: \"uvicorn main:app --port 8080 --reload\". Then go to localhost:8080 to verify.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azizovdatwit/Lab1-CloudComputing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azizovdatwit/Lab1-CloudComputing/issues"
+  },
+  "homepage": "https://github.com/azizovdatwit/Lab1-CloudComputing#readme"
 }
