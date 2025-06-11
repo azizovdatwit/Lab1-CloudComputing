@@ -15,7 +15,7 @@ app.get('/', (req,res) => {
 });
 
 app.get('/houses', (req,res) =>{
-    res.json(houses);
+    res.send(houses);
 });
 
 app.get('/house', (req,res) =>{
@@ -28,7 +28,7 @@ app.get('/house', (req,res) =>{
 });
 app.get('/sortingHat', (req, res) => {
   const student = req.query.student;
-  res.json({ message: `The sorting hat is not sure about what house to place ${student}` });
+  res.send({ message: `The sorting hat is not sure about what house to place ${student}` });
 });
 
 app.get('/house/head', (req, res) => {
@@ -39,7 +39,7 @@ app.get('/house/head', (req, res) => {
 
 app.get('/spells', (req, res) => {
   const spell = req.query.spell;
-  res.json({ message: `We need to learn how to do ${spell}` });
+  res.send({ message: `We need to learn how to do ${spell}` });
 });
 
 app.get('/house/mascot', (req, res) => {
@@ -49,11 +49,11 @@ app.get('/house/mascot', (req, res) => {
 });
 app.get('/bestCharacter', (req,res) => {
     const name=req.query.name;
-    res.json({ message: `${name} is indeed a great character` });
+    res.send({ message: `${name} is indeed a great character` });
 });
 
 app.get('/verify-house', (req, res) => {
-  const house = req.headers['house'];
+      const house = req.headers['house'];
   if (house === 'Hufflepuff') {
     res.send('Hufflepuff');
   } else {
