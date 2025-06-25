@@ -1,7 +1,7 @@
 # Lab3-CloudComputing
 Welcome to the Harry Potter World!
 
-## 📋 Description
+## Description
 The app allows users to:
 
 - View Hogwarts houses and their founders, mascots, and heads
