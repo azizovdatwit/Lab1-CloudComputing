@@ -10,10 +10,10 @@ Extract and group data by year using YEAR(order_date)
 How to Run in DBeaver 
 Make sure the My Guitar Shop database is already connected in DBeaver.
 Steps:
-Launch DBeaver and connect to your database (e.g., my_guitar_shop).
+Launch DBeaver and connect to my_guitar_shop.
 Right-click the database and select "SQL Editor > New SQL Script".
 Open the existing file:
-Go to File > Open File and select lab5_queries.sql
+Go to File > Open File and select lab5.sql
 press Ctrl + Enter to run selected queries.
 Results will be in the bottom panel.
 
