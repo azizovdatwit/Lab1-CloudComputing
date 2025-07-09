@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    image: mysql
+    container_name: mysqlFirst
+    restart: always
+    ports:
+      - "3307:3306"m
+    environment:
+      MYSQL_ROOT_PASSWORD: Davud221#
+      MYSQL_DATABASE: my_guitar_shop
+    volumes:
+      - mysql_db_data:/var/lib/mysql
+volumes:
+  mysql_db_data:
