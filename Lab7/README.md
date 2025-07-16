@@ -14,5 +14,7 @@ under driver properties change public key retrival from false to true. Then chec
 
 After that, go to driver.py file and run it. It'll expect a number between 0-10 to execute queries. After testing, you can enter 0 to exit out.
 
+If you want to check testQueries.py file that contains unittests, you can right click on the file and select run from the menu. You need to be in the correct directory which is Lab1/Lab7
+
 
 
