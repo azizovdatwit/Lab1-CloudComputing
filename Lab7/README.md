@@ -16,5 +16,3 @@ After that, go to driver.py file and run it. It'll expect a number between 0-10 
 
 If you want to check testQueries.py file that contains unittests, you can right click on the file and select run from the menu. You need to be in the correct directory which is Lab1/Lab7
 
-
-
